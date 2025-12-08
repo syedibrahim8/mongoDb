@@ -1,0 +1,81 @@
+MONGO DB - Quick understanding
+
+What is MongoDB?
+A NoSQL database that stores data in JSON-like documents instead of tables.
+
+Why use MongoDB?
+Flexible schema (easy changes), fast development, handles large & unstructured data.
+
+When to use?
+Web/mobile apps, user profiles, products, chats, logs, social media style data.
+
+When not to use?
+Banking heavy transactions, many complex relationships -> better use SQL.
+
+How to use MongoDB (basic idea)
+-> Install MongoDB or use MongoDB Atlas (cloud)
+-> Define a collection (like table)
+-> Insert JSON-like documents
+-> Query documents (finds, update, delete)
+
+Example document:
+json
+{
+    "name":"Syed",
+    "Age":22,
+    "skills":["JS","React"]
+}
+
+What is ORM?
+-> ORM = Object Relational Mapper
+-> Converts database records <-> code objects automatically.
+-> Used mostly in SQL database(example: Sequelize, Prisma)
+
+What is Mongoose?
+-> Mongoose is not an ORM, it is an ODM
+    -> ODM = Object Document Mapper(for MongoDB)
+-> It helps:
+    . define schema (structure)
+    . validate data
+    . easy CRUD me6thods
+    . avoid writing raw queries
+
+Create MongoDB Account & Get MongoDB URI
+
+Step-by-Step (MongoDB Atlas)
+-> Go to: https://www.mongodb.com/atlas
+-> Sign in (Google account also works)
+-> Create a Project -> Create Cluster (free tier M0)
+-> Add Database User -> set username + password
+-> Add Network access -> Allow All IPs (0.0.0.0/0)
+-> Click Connect -> Connect Your Application
+-> Copy the connection string (Mongo URI)
+
+=> mongodb+srv://<username>:<password>@cluster0.xxxx.mongodb.net/myDB
+
+We know JavaScript.
+We can code in JavaScript.
+We can play with objects/array.
+
+But the data stored in db  is not in js objects or arrays 
+In SQL the data is stored in tables.
+In NoSQL the data is stored in JSON/BSON.
+
+Either Tables or JSON none of them is in JS to perform in CRUD Operations
+
+To solve this problem we have:
+ORM => Object Relational Mapper used for SQL.
+which converts table row,col to js objects.
+
+ODM => Object Document Mapper used for NoSQL.
+which converts JSON/BSON to js objects. 
+
+For Example : 
+In SQL : Get all users
+Syntax : SELECT * FROM USERS;
+
+In NoSQL : Get all users 
+syntax : Users.findAll()
+
+
+
