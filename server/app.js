@@ -1,9 +1,9 @@
 import express from "express";
 import dotenv from "dotenv";
-import "./utils/dbConnect.js";
 import userRouter from "./controllers/users/index.js"
 dotenv.config();
-
+console.clear();
+import "./utils/dbConnect.js";
 const port = process.env.PORT;
 const app = express();
 app.use(express.json());

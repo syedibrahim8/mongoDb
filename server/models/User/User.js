@@ -30,16 +30,24 @@ const userSchema = new mongoose.Schema({
     },
     gender:{
         type:String,
-        enum:["Male","Female","Others"],
+        enum:["male","female","others"],
         required: true
     },
     isActive:{
         type:Boolean,
         default:true 
     },
+    isVerified:{
+        type:Boolean,
+        default:false
+    },
     address:{
         type:String,
         required:true,
+    },
+    otp:{
+        type:Number,
+        default:null
     }
 },{
     timestamps:true
